@@ -4,7 +4,7 @@ const userModel = require("../models/userModel");
 const getDonarsListController = async (req, res) => {
   try {
     const donarData = await userModel
-      .find({ role: "donar" })
+      .find({ role: "donor" })
       .sort({ createdAt: -1 });
 
     return res.status(200).send({
